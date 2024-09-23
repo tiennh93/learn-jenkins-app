@@ -78,6 +78,7 @@ pipeline {
       }
       steps {
         sh '''
+          npm install sharp --unsafe-perm
           npm install netlify-cli node-jq
           node_modules/.bin/netlify --version
           echo "Deploying to staging. Site ID: $NETLIFY_SITE_ID"
